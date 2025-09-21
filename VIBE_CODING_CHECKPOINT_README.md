@@ -95,20 +95,56 @@ resetcheckpoint
 # Continue vibing from where you left off
 ```
 
-## 🛠️ Installation
+## 🛠️ Installation & Global Setup
 
-### Method 1: Quick Load (Any Project)
+### Method 1: Quick Load (Any Project - Temporary)
 ```powershell
-# Just download and load
+# Windows - Just download and load
 . .\VibeCodingCheckpoint.ps1
+
+# Linux/Mac - Load bash version
+source vibecheckpoint.sh
 ```
 
-### Method 2: Permanent Setup (Recommended)
-```powershell
-# Add to your PowerShell profile
-Add-Content $PROFILE "`n. `"$PWD\VibeCodingCheckpoint.ps1`""
+### Method 2: Permanent Global Setup (Recommended)
 
-# Now available in every PowerShell session!
+#### Windows (PowerShell):
+```powershell
+# Add to PowerShell profile for global access
+Add-Content $PROFILE "`n# Load VibeCodingCheckpoint functions`n. `"$PWD\VibeCodingCheckpoint.ps1`"`nWrite-Host 'VibeCodingCheckpoint loaded! Type `"checkpointhelp`" for commands.' -ForegroundColor Green"
+
+# Now available in EVERY PowerShell session!
+```
+
+#### Linux/Mac (Bash):
+```bash
+# Add to bash profile for global access
+echo '' >> ~/.bashrc
+echo '# Load VibeCodingCheckpoint functions' >> ~/.bashrc
+echo 'source /path/to/vibecheckpoint.sh' >> ~/.bashrc
+echo 'echo "VibeCodingCheckpoint loaded! Type \"checkpointhelp\" for commands."' >> ~/.bashrc
+
+# Reload profile or restart terminal
+source ~/.bashrc
+```
+
+### Method 3: One-Time Manual Load
+```powershell
+# Windows
+. "D:\Vibe Coding 2\VibeCodingCheckPoint\VibeCodingCheckpoint.ps1"
+
+# Linux/Mac
+source "/path/to/VibeCodingCheckPoint/vibecheckpoint.sh"
+```
+
+### Verify Global Installation:
+```powershell
+# Open new PowerShell terminal - should see:
+# VibeCodingCheckpoint loaded! Type "checkpointhelp" for commands.
+
+# Test in any Git repository:
+makecheckpoint
+checkcheckpoint
 ```
 
 ## 🔧 How It Works Technically
