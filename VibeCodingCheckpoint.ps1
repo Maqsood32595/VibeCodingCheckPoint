@@ -21,8 +21,8 @@ function makecheckpoint {
     if ($LASTEXITCODE -eq 0) {
         # Tag with fixed name "checkpointcreated"
         git tag -f "checkpointcreated" 2>$null
-        # Reset back
-        git reset --hard HEAD~1 2>$null
+        # Reset back (CRITICAL FIX: --soft instead of --hard)
+        git reset --soft HEAD~1 2>$null
         Write-Host "Checkpoint created: $timestamp" -ForegroundColor Green
         
         # Store timestamp in git config
