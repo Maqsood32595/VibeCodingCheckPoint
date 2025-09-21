@@ -57,31 +57,29 @@ source ./vibecheckpoint.sh
 
 ### Permanent (load automatically in any folder):
 
-**Windows PowerShell:**
-Add to your PowerShell profile ($PROFILE):
+**Windows PowerShell:** Add to your PowerShell profile ($PROFILE):
 ```powershell
 # Add this line to your $PROFILE file:
 . "C:\path\to\VibeCodingCheckpoint.ps1"
 ```
 
-**Linux/Mac (bash/zsh):**
-Add to your shell profile (~/.bashrc or ~/.zshrc):
+**Linux/Mac (bash/zsh):** Add to your shell profile (~/.bashrc or ~/.zshrc):
 ```bash
 # Add this line to your shell profile:
 source /path/to/vibecheckpoint.sh
 ```
 
-**To use globally in any folder:**
+### To use globally in any folder:
 1. Add the script directory to your system PATH
-2. Or place the scripts in a directory already in your PATH
+2. Or place the scripts in a directory already in your PATH  
 3. Then you can load from anywhere with:
-   ```powershell
-   # Windows
-   . VibeCodingCheckpoint.ps1
-   
-   # Linux/Mac
-   source vibecheckpoint.sh
-   ```
+```powershell
+# Windows
+. VibeCodingCheckpoint.ps1
+
+# Linux/Mac  
+source vibecheckpoint.sh
+```
 
 ## Use Cases
 
